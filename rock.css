@@ -1,0 +1,4 @@
+.gameWrap {padding: 100px; width:100%; height:100vh; background: #FFEB00;}
+.gameWrap .game {overflow: hidden;}
+.gameWrap .game > li {float: left;}
+.gameWrap .top .who img {width: 70px;}
