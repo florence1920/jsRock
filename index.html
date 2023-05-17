@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./rock.css">
     <link rel="stylesheet" href="./reset.css">
-    <script src="./index.js" />"></script>
+    
 </head>
 <body>
     <div class="gameWrap">
@@ -17,21 +17,46 @@
                     <img src="./img/playerChar.png" alt="어라">
                     <span class="tit">Player</span>
                 </div>
-                <img class="rsp" src="./img/rockLeft.png" alt="어라">
+                <img class="rsp pHand" src="./img/rockLeft.png" alt="어라">
             </li>    
-            <li></li>    
+            <li>
+                <div class="center start">
+                    <p class="head">가위 바위 보를 이겨서</p>    
+                    <p class="head">컴퓨터보다 결승선에 먼저 도착하세요.</p>    
+                    <p class="sub">*바위는 1칸, 가위는 2칸, 보자기는 3칸</p>    
+                    <div class="btn start">시작하기</div>
+                </div>    
+            </li>    
             <li>
                 <div class="who">
                     <img src="./img/comChar.png" alt="어라">
                     <span class="tit">Computer</span>
                 </div>
-                <img src="" alt="">    
+                <img class="rsp cHand" src="./img/rockRight.png" alt="어라">    
             </li>    
         </ul>
 
-        <ul class="bot game">
-               
-        </ul>
+        <div class="bot game">
+            <div class="char player">
+                <img src="./img/playerChar.png" alt="">    
+            </div>
+            <div class="char com">
+                <img src="./img/comChar.png" alt="">   
+            </div>
+            <ul class="stair">
+                <li class="draw"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
     </div>
+    <script src="./index.js" />"></script>
 </body>
 </html>
