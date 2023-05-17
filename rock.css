@@ -1,4 +1,11 @@
 .gameWrap {padding: 100px; width:100%; height:100vh; background: #FFEB00;}
 .gameWrap .game {overflow: hidden;}
 .gameWrap .game > li {float: left;}
+.gameWrap .game .who .tit {font-size:50px; font-weight:bold; vertical-align: top;}
 .gameWrap .top .who img {width: 70px;}
+.gameWrap .rsp {margin:70px 0 0;}
+
+.gameWrap .top > li {width:30%;}
+.gameWrap .top > li:nth-child(2) {width:40%;}
+.gameWrap .top > li:nth-child(3) {float:right;}
+
