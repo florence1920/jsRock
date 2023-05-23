@@ -9,21 +9,20 @@
 .gameWrap .top { position: relative;}
 .gameWrap .top > li {position: absolute; top: 0;}
 .gameWrap .top > li:nth-child(1) {left: 0;}
-.gameWrap .top > li:nth-child(2) {top:120px; left: 50%; transform:translateX(-50%);}
+.gameWrap .top > li:nth-child(2) {top:0; left: 50%; transform:translateX(-50%); transition:all .3s; }
 .gameWrap .top > li:nth-child(3) {top: 0; right: 0;}
 .gameWrap .game .center .head {font-size:30px; font-weight:bold;}
 .gameWrap .game .center .sub {font-size:25px;}
 
 .gameWrap .game .center.ing .btnWrap {overflow:hidden; width: 80%; margin:0 auto;}
-.gameWrap .game .center.ing .btnWrap .choice {float: left; margin:0 1% 0 0; width:32%;}
+.gameWrap .game .center.ing .btnWrap > div {float: left; margin:0 1% 0 0; width:32%;}
 
 .gameWrap .game .center.start .btn {margin: 50px auto 0;}
 .gameWrap .game .center.End .re {margin: 20px auto;}
 
-.gameWrap .game .center {margin:100px 0 0; min-width: 500px; line-height: 1.5; text-align: center;}
-.gameWrap .game .center.start {display: none;}
-.gameWrap .game .center.ing {display: none;}
-
+.gameWrap .game .center {display:none; margin:100px 0 0; min-width: 500px; line-height: 1.5; text-align: center;}
+.gameWrap .game .center.start {display:block;}
+.gameWrap .game .center.ing {margin:150px 0 0;}
 .gameWrap .game .center.End {margin:0;}
 .gameWrap .game .center.End .tit {font-weight: bold; font-size:50px;}
 
