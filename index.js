@@ -15,6 +15,10 @@ function gameStart(){
     const pHand = document.querySelector('.pHand');
     const cHand = document.querySelector('.cHand');  
     const hands = document.querySelectorAll('.rsp');
+    const computerOptions = ['rock','paper','sci'];
+
+    let pScore = 0;
+    let cScore = 0;
 
     btnWrap.forEach( btn =>{
         btn.addEventListener("click",function(){
@@ -26,11 +30,16 @@ function gameStart(){
             })
             //가위바위보 선택 확인
             //클래스 이름으로 확인 
-            let weapon = btn.className.substring(4);
+            let pChoice = btn.className.substring(4);
+            //컴퓨터 선택
+            const cNumber = Math.floor(Math.random() * 3);
+            const cChoice = computerOptions[cNumber];
             setTimeout(()=>{
+                compare(pChoice,cChoice);
                 
                 //update Images
-                pHand.src = `./img/${weapon}Left.png`
+                pHand.src = `./img/${pChoice}Left.png`
+                cHand.src = `./img/${cChoice}Right.png`
             },900);
             //손 흔들기 애니메이션
             pHand.style.animation="shakePlayer 1s ease";
@@ -39,6 +48,59 @@ function gameStart(){
             
         });
     });
+    // btnWrap End
+
+    const pChar = document.querySelector('.player');
+    const cChar = document.querySelector('.com');
+    const stair = document.querySelector('.stair > li');
+
+    function moveChar(){
+        pChar.style.left = `${pScore}0%`
+        cChar.style.left = `${cScore}4.5%`
+        const pNow = document.querySelector(`.stair :nth-child(${pScore + 1})`);
+        pNow.classList.add('win');
+        console.log(stair);
+    }
+    
+    function compare(pChoice,cChoice){
+        if(pChoice == cChoice){
+            return;
+        }
+        if(pChoice == 'rock'){
+            if(cChoice == 'paper'){
+                cScore = cScore + 3;
+                moveChar();
+                return;
+            }else{
+                pScore++;
+                moveChar();
+                return;
+            }
+        }
+        if(pChoice == 'sci'){
+            if(cChoice == 'paper'){
+                pScore = pScore + 2;
+                moveChar();
+                return;
+            }else{
+                cScore++;
+                moveChar();
+                return;
+            }
+        }
+        if(pChoice == 'paper'){
+            if(cChoice == 'rock'){
+                pScore = pScore + 3;
+                moveChar();
+                return;
+            }else{
+                cScore = cScore + 2;
+                moveChar();
+                return;
+            }
+        }
+    }
+    //compare End
 
     
     
