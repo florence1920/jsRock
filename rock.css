@@ -18,13 +18,13 @@
 .gameWrap .game .center.ing .btnWrap > div {float: left; margin:0 1% 0 0; width:32%;}
 
 .gameWrap .game .center.start .btn {margin: 50px auto 0;}
-.gameWrap .game .center.End .re {margin: 20px auto;}
+.gameWrap .game .center.end .re {margin: 20px auto;}
 
 .gameWrap .game .center {display:none; margin:100px 0 0; min-width: 500px; line-height: 1.5; text-align: center;}
 .gameWrap .game .center.start {display:block;}
 .gameWrap .game .center.ing {margin:150px 0 0;}
-.gameWrap .game .center.End {margin:0;}
-.gameWrap .game .center.End .tit {font-weight: bold; font-size:50px;}
+.gameWrap .game .center.end {margin:50px 0;}
+.gameWrap .game .center.end .message {font-weight: bold; font-size:100px;}
 
 .gameWrap .bot {position: absolute;width: 900px; bottom: 80px; left: 50%; transform:translateX(-50%);}
 .gameWrap .stair {overflow: hidden; }

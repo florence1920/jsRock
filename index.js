@@ -49,17 +49,54 @@ function gameStart(){
         });
     });
     // btnWrap End
-
+    //endGame 
+    function endGame(){
+        const end = document.querySelector('.end');
+        const message = document.querySelector('.message');
+        ing.style.display = 'none';
+        end.style.display = 'block';
+        if(pScore > cScore){
+            console.log('win')
+            message.textContent = 'WIN!!';
+            console.log(message)
+        }else if (pScore < cScore){
+            console.log('lose')
+            message.textContent = '바보';
+            console.log(message)
+        }
+        
+    }
     const pChar = document.querySelector('.player');
     const cChar = document.querySelector('.com');
     const stair = document.querySelector('.stair > li');
-
+    const stairWrap = document.querySelectorAll('.stair li');
     function moveChar(){
+        if(pScore>=9||cScore>=9){
+            if(pScore>=9){
+                pScore = 9;
+            }else if (cScore>=9){
+                cScore=9;
+            }
+            endGame();
+        }
+        //처음에 클래스 다 지우기
+        stairWrap.forEach( stair =>{
+            stair.classList.remove('win','draw','lose');
+        });
         pChar.style.left = `${pScore}0%`
         cChar.style.left = `${cScore}4.5%`
-        const pNow = document.querySelector(`.stair :nth-child(${pScore + 1})`);
-        pNow.classList.add('win');
-        console.log(stair);
+        //같이 있을 때 
+        if(pScore == cScore){
+            const draw = document.querySelector(`.stair :nth-child(${pScore + 1})`);
+            draw.classList.add('draw');
+        }else{
+            //이겼을 때
+            const pNow = document.querySelector(`.stair :nth-child(${pScore + 1})`);
+            pNow.classList.add('win');
+            const cNow = document.querySelector(`.stair :nth-child(${cScore + 1})`);
+            cNow.classList.add('lose');
+        }
+        
     }
     
     function compare(pChoice,cChoice){
