@@ -17,9 +17,11 @@ function gameStart(){
     const hands = document.querySelectorAll('.rsp');
     const computerOptions = ['rock','paper','sci'];
 
+    //스코어 설정
     let pScore = 0;
     let cScore = 0;
 
+    //가위 바위 보 눌렀을 때 
     btnWrap.forEach( btn =>{
         btn.addEventListener("click",function(){
             //애니메이션 지워주기
@@ -34,6 +36,7 @@ function gameStart(){
             //컴퓨터 선택
             const cNumber = Math.floor(Math.random() * 3);
             const cChoice = computerOptions[cNumber];
+            // 손 흔드는 시간
             setTimeout(()=>{
                 compare(pChoice,cChoice);
                 
@@ -48,8 +51,8 @@ function gameStart(){
             
         });
     });
-    // btnWrap End
-    //endGame 
+    
+    //게임 끝났을 때
     function endGame(){
         const end = document.querySelector('.end');
         const message = document.querySelector('.message');
@@ -66,10 +69,12 @@ function gameStart(){
         }
         
     }
+
     const pChar = document.querySelector('.player');
     const cChar = document.querySelector('.com');
     const stair = document.querySelector('.stair > li');
     const stairWrap = document.querySelectorAll('.stair li');
+    //캐릭터 움직이기
     function moveChar(){
         if(pScore>=9||cScore>=9){
             if(pScore>=9){
@@ -99,6 +104,7 @@ function gameStart(){
         
     }
     
+    //점수 매기기
     function compare(pChoice,cChoice){
         if(pChoice == cChoice){
             return;
@@ -138,10 +144,6 @@ function gameStart(){
         }
     }
     //compare End
-
-    
-    
-
 };
 
 //1. 게임 시작 버튼 누름

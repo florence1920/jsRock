@@ -9,7 +9,7 @@
 .gameWrap .top { position: relative;}
 .gameWrap .top > li {position: absolute; top: 0;}
 .gameWrap .top > li:nth-child(1) {left: 0;}
-.gameWrap .top > li:nth-child(2) {top:0; left: 50%; transform:translateX(-50%); transition:all .3s; }
+.gameWrap .top > li:nth-child(2) {top:0; left: 50%; transform:translateX(-50%); transition:all .3s;}
 .gameWrap .top > li:nth-child(3) {top: 0; right: 0;}
 .gameWrap .game .center .head {font-size:30px; font-weight:bold;}
 .gameWrap .game .center .sub {font-size:25px;}
@@ -28,7 +28,7 @@
 
 .gameWrap .bot {position: absolute;width: 900px; bottom: 80px; left: 50%; transform:translateX(-50%);}
 .gameWrap .stair {overflow: hidden; }
-.gameWrap .stair > li {float: left; margin:0 1% 0 0; width:9%; height:100px; border: 1px solid #000; background: #fff; border-radius: 5px;}
+.gameWrap .stair > li {float: left; margin:0 1% 0 0; width:9%; height:100px; border: 1px solid #000; background: #fff; border-radius: 5px; transition:all .3s;}
 .gameWrap .stair > li:nth-child(1) {height:80px;}
 .gameWrap .stair > li:nth-child(2) {height:130px;}
 .gameWrap .stair > li:nth-child(3) {height:160px;}
